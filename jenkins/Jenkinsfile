@@ -14,7 +14,6 @@ node {
         }
 
         stage('Deploy') { 
-            print('sleep for 60 seconds')
             sleep(time:60, unit: "SECONDS")
             input(message: "Lanjutkan ke tahap Deploy?")
         }
