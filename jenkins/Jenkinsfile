@@ -9,10 +9,6 @@ node {
             junit 'target/surefire-reports/*.xml'
         }
 
-        stage('Deliver') {
-            sh './jenkins/scripts/deliver.sh'
-        }
-
         stage('Manual Approval') {
             input(message: "Lanjutkan ke tahap Deploy?")
         }
