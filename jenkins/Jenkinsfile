@@ -16,7 +16,7 @@ node {
         stage('Deploy') { 
             print('sleep for 60 seconds')
             sleep(time:60, unit: "SECONDS")
-            sh './jenkins/scripts/kill.sh' 
+            input message: 'Lanjutkan ke tahap Deploy?'
         }
     }
 }
